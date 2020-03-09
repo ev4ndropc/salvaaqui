@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  outline: none;
+}
+
+a{
+  color: #886be8!important;
+  text-decoration:none!important;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #100f12
+}
+
+.background-login{
+  background: rgb(16, 15, 18);
+}
+
+.background-login::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: url(../images/stars.svg) center center no-repeat;
+}
+.footer-img {
+  background: url(../images/mountains.svg) center bottom / 100% no-repeat rgb(11, 10, 13);
+}
+.container-login .card {
+  background: #201f24;
+  color: #fff;
+}
+
+div.container-login{
+  max-width: 500px;
+  height:100vh
+}
+div.container .card{
+  min-width: 90%;
+  box-shadow: 5px 2px 15px #0000002e;
+}
+
+.custom-input{
+  padding-left: 35px!important;
+  border:none;
+  border-bottom: 1px solid #ced4da;
+  background-color: #05050552;
+  color: #e8eaec;
+}
+
+.custom-input:focus{
+  background-color: #05050552;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  color:#ced4da
+}
+
+input:focus{
+  padding-left:10px;
+}
+.container-input-icons{
+  position: relative;
+}
+
+.container-input-icons i{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 17px;
+}
+
+.btn-custom-1{
+  background: #886BE8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #594698, #886BE8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #594698, #886BE8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: none;
+  border: none;
+  transition: all .3s linear;
+}
+
+.btn-custom-1:hover{
+  background: #886BE8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #886BE8, #594698);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #886BE8, #594698); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@keyframes float {
+	0% {
+    filter: hue-rotate(10deg);
+		transform: translatey(0px);
+	}
+	50% {
+    filter: hue-rotate(45deg);
+		transform: translatey(-5px);
+	}
+	100% {
+    filter: hue-rotate(10deg);
+		transform: translatey(0px);
+	}
+}
+
+
+@keyframes bgChange {
+  0% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:5%;
+    color: #fff;
+  }
+  10% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:10%;
+    color: #fff;
+
+  }
+  20% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:15%;
+    color: #fff;
+  }
+  30% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:20%;
+    color: #fff;
+
+  }
+  40% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:25%;
+    color: #fff;
+  }
+  50% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:30%;
+    color: #fff;
+
+  }
+  60% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:25%;
+    color: #fff;
+  }
+  70% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:20%;
+    color: #fff;
+  }
+  80% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:15%;
+    color: #fff;
+  }
+  90% {
+
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:10%;
+    color: #fff;
+  }
+  100% {
+    background: -webkit-linear-gradient(#594698, #886be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position:5%;
+    color: #fff;
+  }
+}
+
+.icon-logo {
+  font-size: 35px;
+  margin: 0 5px;    
+  transition: all .2s linear;
+  color: #fff;
+  animation: bgChange 5s linear infinite;
+}
+
+.float{
+  animation: float 3s infinite;
+}
+
+.brand{
+  font-size: 25px;
+  color: #fff;
+}
+
+.erro-msg{
+  transition: all .3s linear;
+  font-size: 17px;
+}
+
+
+.erro-msg.alert-danger {
+  color: #ffffff;
+  background-color: #ab212e;
+  border-color: #f5c6cb;
+}
+
+.nav-right{
+  align-items: center;
+}
+
+.nav-right li{
+  margin: 0 10px
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.user__menu{
+  top: -150px;
+  width: 200px;
+  position: absolute;
+  background: #fff;
+  right: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3px;
+  transition: all .3s linear;
+  z-index: 99999;
+  box-shadow: 2px 2px 10px #0000008c;
+  opacity: 0;
+}
+
+.show__submenu-user{
+  top: 50px;
+  opacity: 1;
+}
+
+.user__menu-itens{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.user__menu-itens a{
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  padding-left: 35%;
+}
+
+.user__menu-itens a i{
+  margin-right:5px;
+}
+
+.user__menu-itens a:hover{
+color: #e0e6ed!important;
+width: 100%;
+background: #886be8;
+padding: 10px;
+border-radius: 3px;
+padding-left: 35%;
+}
+
+.user__menu-hr{
+  margin: 0;
+  width: 100%;
+}
+
+.avatar{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+.notifications{
+  font-size: 22px;
+  color: #fff;
+  top:2px;
+  position: relative;
+}
+
+.overlay-news{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #00000082;
+  display: none;
+}
+
+.overlay-news__show{
+  display: block;
+}
+
+.close-news{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 17px;
+}
+
+.news-mensages{
+  height: 100vh;
+  width: 300px;
+  right: -300px;
+  top: 0;
+  position: fixed;
+  background-color: #f7f7f7;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+
+.news-mensages img {
+  margin-right: 15px;
+  width: 30px;
+}
+
+.news-mensages__show{
+  right: 0px!important;
+  opacity: 1!important;
+}
+.links {
+  padding: 10px;
+  color: #fff;
+}
+
+.links .title{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+.links .link{
+  width: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+.links .actions{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.links .actions a{
+  color: #fff!important;
+}
+
+.icon-add-link{
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  background: #785ecd;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 25px;
+  transition: all .1s linear;
+}
+
+.icon-add-link:hover{
+  font-size: 27px;
+  top:7px;
+  left: 9px;
+}
+
+button.close{
+  color: #fff;
+}
+
+.copiado{
+  background: #45484bba;
+}
+
+@media only screen and (max-width: 980px) {
+  nav.navbar{
+    width: 100%;
+  }
+  div.navbar-collapse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navbar-collapse li{
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-nav.ml-3.mr-auto.mt-2.mt-lg-0{
+    width: 100%;
+    margin: 0px!important;
+  }
+  .nav-right.navbar-nav.mt-2.mt-lg-0.d-flex{
+    flex-direction: row;
+    margin-right: -10px;
+  }
+  .user__menu {
+    top: 100%!important;
+    width: 80%;
+    left: 10%;
+  }
+  .links .title,
+  .links .link,
+  .links .actions{
+    overflow: scroll;
+  }
+
+  .actions button{
+    font-size: 10px;
+  }
+
+}

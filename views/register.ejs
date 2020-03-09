@@ -1,0 +1,83 @@
+<%- include('./partials/header')%>
+<div class="background-login">
+  <div class="container container-login mt-2 d-flex justify-content-center align-items-center flex-column">
+    <strong class="mb-3 float brand">Salva<i class="icon-logo fas fa-cloud-upload"></i>aqui</strong>
+    <div class="erro-msg opacity-0 alert alert-danger" role="alert">...</div>
+    <div class="card">
+      <div class="card-header">
+        Cadastre-se e para poder salvar!
+      </div>
+      <div class="card-body">
+        <form id="form" class="form-group" action="/register" method="POST">
+
+          <label class="">Nome</label>
+          <div class="container-input-icons">
+            <i class="far fa-user"></i>
+          </div>
+          <input class="custom-input form-control mb-3" type="name" name="nome">
+
+          <label class="">Email</label>
+          <div class="container-input-icons">
+            <i class="far fa-envelope"></i>
+          </div>
+          <input class="custom-input form-control mb-3" type="email" name="email">
+
+          <label class="">Senha</label>
+          <div class="container-input-icons">
+            <i class="far fa-lock"></i>
+          </div>
+          <input class="custom-input form-control mb-3" type="password" name="password">
+
+          <label class="">Repita a senha</label>
+          <div class="container-input-icons">
+            <i class="far fa-lock"></i>
+          </div>
+          <input class="custom-input form-control mb-3" type="password" name="re-password">
+
+          <button class="btn register btn-custom-1 w-100 text-white mt-2">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$("#form").submit(function() {
+    if($("input[name=nome]").val() == ''){
+      $('.erro-msg').html('O campo de <strong>nome</strong> não pode estar vazio!').removeClass('opacity-0');
+      setTimeout(function(){
+        $('.erro-msg').addClass('opacity-0');
+      },5000)  
+        return false;
+    }
+    if($("input[name=email]").val() == ''){
+      $('.erro-msg').html('O campo de <strong>email</strong> não pode estar vazio!').removeClass('opacity-0');
+      setTimeout(function(){
+        $('.erro-msg').addClass('opacity-0');
+      },5000)  
+        return false;
+    }
+    if($("input[name=password]").val() == ''){
+      $('.erro-msg').html('O campo de <strong>senha</strong> não pode estar vazio!').removeClass('opacity-0');
+      setTimeout(function(){
+        $('.erro-msg').addClass('opacity-0');
+      },5000)  
+        return false;
+    }
+    if($("input[name=re-password]").val() == ''){
+      $('.erro-msg').html('Por favor, confirme a <strong>senha</strong>!').removeClass('opacity-0');
+      setTimeout(function(){
+        $('.erro-msg').addClass('opacity-0');
+      },5000)  
+        return false;
+    }
+    if($("input[name=password]").val() != $("input[name=re-password]").val() ){
+      $('.erro-msg').html('As senhas não conferem!').removeClass('opacity-0');
+      setTimeout(function(){
+        $('.erro-msg').addClass('opacity-0');
+      },5000)  
+        return false;
+    }
+
+})
+</script>
+<%- include('./partials/footer')%>
