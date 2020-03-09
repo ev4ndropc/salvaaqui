@@ -28,10 +28,7 @@
         <%= links.link %>        
       </div>  
       <div class="actions">
-        <a class="mr-1 btn btn-success">Editar</a>
-        <form method="GET" action="/remove-link/<%= links.id %>" onsubmit="ConfirDelete(event, this)">
-        <button type="submit" class="ml-1 btn btn-danger">Apagar</button>
-      </form>
+        <%= links.nome %>        
       </div>
     </div>
     <% }) %>
