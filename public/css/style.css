@@ -367,6 +367,11 @@ padding-left: 35%;
   width: 25%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.created-by{
+  color:#6953b3
 }
 
 .links .actions a{
