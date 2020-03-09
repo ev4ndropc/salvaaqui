@@ -61,7 +61,7 @@ router.post('/login', (req, res) =>{
                 }
                 res.redirect('/dashboard')
             }else{
-
+                res.redirect('/')
             }
 
         }else{
