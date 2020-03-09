@@ -371,7 +371,9 @@ padding-left: 35%;
 }
 
 .created-by{
-  color:#6953b3
+  color: #a793e8;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .links .actions a{
