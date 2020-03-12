@@ -85,3 +85,7 @@ filter: brightness(1) invert(1)!important;
     color: rgb(127, 127, 127)!important;
     border-color: rgb(127, 127, 127)!important;
 }
+
+.news-mensages {
+box-shadow: -6px 1px 17px 1px rgba(0, 0, 0, 0.13)!important;
+}
