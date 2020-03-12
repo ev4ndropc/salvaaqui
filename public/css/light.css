@@ -77,3 +77,11 @@ body {
   opacity: 0.8;
 }
 
+.navbar-dark .navbar-toggler-icon{
+filter: brightness(1) invert(1)!important;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgb(127, 127, 127)!important;
+    border-color: rgb(127, 127, 127)!important;
+}
