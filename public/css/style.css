@@ -470,6 +470,7 @@ padding-left: 35%;
   background-color: #f7f7f7;
   opacity: 0;
   transition: all .2s ease-in-out;
+  z-index:999999
 }
 
 .news-mensages img {
