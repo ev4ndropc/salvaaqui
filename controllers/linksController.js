@@ -1,7 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../models/User');
+const express = require('express')
+const router = express.Router()
+const User = require('../models/User')
 const Link = require('../models/Link')
+const connection = require('../database/db')
 var adminAuth = require('../middlewares/adminAuth')
 
 
@@ -48,18 +49,24 @@ router.post('/add-link', (req,res) =>{
       usuario: sessionUser.name,
       userId: sessionUser.id,
     }).then( result =>{
+
+      connection.query('UPDATE `users` SET createdLinks = createdLinks + 1 WHERE id ='+sessionUser.id+'')
       res.redirect('/links')
+
     })
 
 });
 
 router.get('/remove-link/:id', (req,res) =>{
+  var sessionUser = req.session.user;
   var id = req.params.id
   Link.destroy({
     where:{
       id: id
     }
   }).then( result =>{
+
+    connection.query('UPDATE `users` SET createdLinks = createdLinks -1 WHERE id ='+sessionUser.id+'')
     res.redirect('/links')
   })
 

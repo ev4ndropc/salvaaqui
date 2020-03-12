@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const connection = require('../database/db');
 
 const User = connection.define('users',{
-        nome:{
+        name:{
             type: Sequelize.STRING,
             allowNull: false
         },
@@ -16,6 +16,14 @@ const User = connection.define('users',{
         },
         avatar:{
             type: Sequelize.TEXT,
+            allowNull: true
+        }, 
+        createdLinks:{
+            type: Sequelize.INTEGER,
+            allowNull: true
+        },
+        theme:{
+            type: Sequelize.STRING,
             allowNull: true
         }
 })

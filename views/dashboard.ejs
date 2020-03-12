@@ -1,4 +1,34 @@
 <%- include('./partials/header')%>
 <%- include('./partials/navbar')%>
+<div class="container mt-5">
+    <div class="welcome-div mb-5">
+        <span class="welcome-text text-white h6">Bem vindo(a) de volta <strong class="text-capitalize"><%= sessionUser.name %></strong></span>
+    </div>
+    <div class="container-cards-home">
+        
+        <div class="cards-home">
+            <span class="items">Meus Links</span>
+            <h1><%= totalLinks %></h1>
+            <i class="fas fa-link"></i>
+        </div>
 
+        <div class="cards-home">
+            <span class="items">Todos os Links</span>
+            <h1><%= links.count %></h1>
+            <i class="fas fa-link"></i>
+        </div>
+
+        <div class="cards-home">
+            <span class="items">Usuários Cadastrados</span>
+            <h1><%= users.count %></h1>
+            <i class="fas fa-users"></i>
+        </div>
+
+        <div class="cards-home">
+            <span class="items">Projetos</span>
+            <h1><%= users.count %></h1>
+            <i class="far fa-box-open"></i>
+        </div>
+    </div>
+</div>
 <%- include('./partials/footer')%>

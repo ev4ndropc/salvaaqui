@@ -1,6 +1,18 @@
-<div style="display: flex;justify-content: center;align-items: center;position: fixed;top: 0;width:100%;height:100%;background-color: darkgray;">
-  <h1><%= message %></h1>
-</div>
+<%- include('./partials/header-no-login')%>
 
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<div class="background-login">
+  <div class="container error-page d-flex justify-content-center align-items-center flex-column">
+    <span class="text-white h2 text-center oops">Oops! PÁGINA NÃO ENCONTRADA</span>
+    <h1 class="error_404">
+      <span>4</span>
+      <span>0</span>
+      <span>4</span>
+    </h1>
+    <span class="text-white h6 text-center">Lamentamos, mas a página solicitada não foi encontrada.</span>
+  </div>
+  <div class="d-flex mt-2 justify-content-center buttons-error">
+    <a class="btn btn-success ml-2 text-white" href="/">Voltar</a>
+    <a class="btn btn-danger ml-2 text-white" href="mailto:e_sayto@hotmail.com">Contate-nos</a>   
+  </div>
+</div>
+<%- include('./partials/footer-no-login')%>

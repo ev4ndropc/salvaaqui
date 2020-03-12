@@ -1,0 +1,32 @@
+body {
+  background-color: #100f12
+}
+
+.change-theme:before {
+  content: "\f185";
+}
+
+.notifications,
+.change-theme{
+  color: #fff!important;
+}
+
+.welcome-div{
+  background-color: #343a40;
+  color: #b1b1b5;
+}
+
+.bg-dark {
+  background-color: #343a40!important;
+}
+
+.nav-right li:nth-child(1), .nav-right li:nth-child(2) {
+  padding: 2px 20px;
+  background: #99999991;
+  border-radius: 40px; 
+  margin-right:5px;
+  transition: all .1s linear;
+}
+.nav-right li:nth-child(1):hover, .nav-right li:nth-child(2):hover{
+  opacity: 0.8;
+}

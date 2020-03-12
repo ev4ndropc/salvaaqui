@@ -4,21 +4,23 @@ $('.avatar').click(function(){
 
 $('.notifications').click(function(){
   $('.news-mensages').toggleClass('news-mensages__show');
-
-  setTimeout(function(){
-    $('.overlay-news').toggleClass('overlay-news__show')
-  }, 300)
 })
 
-$('.close-news, .overlay-news').click(function(){
+$('.close-news').click(function(){
   $('.news-mensages').removeClass('news-mensages__show');
-  
-  setTimeout(function(){
-    $('.overlay-news').removeClass('overlay-news__show')
-  }, 300)
-
 })
+
+$(function(){
+  $('.upload-avatar').click(function(e){
+      e.preventDefault();
+      $('#file').click();}
+  );
+});
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
 })

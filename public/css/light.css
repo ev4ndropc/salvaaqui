@@ -1,0 +1,79 @@
+body {
+  background-color: #e8edf2
+}
+
+.change-theme:before {
+  content: "\f755";
+}
+
+.notifications,
+.change-theme{
+  color: #666666!important;
+}
+
+.welcome-div{
+  background-color: #fff!important;
+  color: #666666!important;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.13);
+}
+
+.bg-dark {
+  background-color: #fff!important;
+}
+
+.navbar.navbar-expand-lg{
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.13);
+}
+
+.container-cards-home div{
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.13);
+}
+
+.welcome-text{
+  color: #666666!important;
+}
+
+.brand{
+  color: #666666!important;
+}
+
+.nav-link.text-white{
+  color: #666666!important;
+}
+
+.text-white{
+  color: #666666!important;
+}
+
+.custom-input{
+  color: #666666!important;
+  background: #e8edf2;
+  border-bottom: 1px solid #000000!important;
+}
+
+.custom-input:focus {
+  background-color: #d0dfef;
+}
+
+.links{
+  color: #666666!important;
+}
+.main-card{
+  background: #fff!important;
+}
+
+.btn-custom-1{
+  color:#fff!important
+}
+
+.nav-right li:nth-child(1), .nav-right li:nth-child(2) {
+  padding: 2px 20px;
+  background: #e8edf2;
+  border-radius: 40px; 
+  margin-right:5px;
+  transition: all .1s linear;
+}
+.nav-right li:nth-child(1):hover, .nav-right li:nth-child(2):hover{
+  opacity: 0.8;
+}
+

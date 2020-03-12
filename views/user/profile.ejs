@@ -1,3 +1,61 @@
 <%- include('../partials/header')%>
 <%- include('../partials/navbar')%>
+
+<div class="container mt-5 d-flex flex-column justify-content-center align-items-center">
+    <div class="container-avatar mb-5">
+        <img class="avatar-profile" src="/images/avatars/<%= sessionUser.avatar %>" alt="">
+        <i class="upload-avatar far fa-upload" data-toggle="tooltip" data-placement="top" title="" data-original-title="Faça o upload de avatar"></i>
+        <input class="d-none" id="file" type="file" name="avatar">
+    </div>
+
+    <div class="card main-card">
+        <div class="card-header main-card text-white h3 d-flex justify-content-center align-items-center ">
+            Seu Perfil
+        </div>
+        <div class="card-body">
+            <form action="/profile/update" method="POST">
+                <div class="card-profile-inputs">
+
+                    <div>
+                        <label class="text-white">Nome</label>
+                        <div class="container-input-icons">
+                            <i class="text-white far fa-user"></i>
+                        </div>
+                        <input class="custom-input form-control" type="text" name="name" value="<%= result.name %>">                    
+                    </div>
+                    <div>
+                        <label class="text-white">Email</label>
+                        <div class="container-input-icons">
+                            <i class="text-white far fa-envelope"></i>
+                        </div>
+                        <input class="custom-input form-control" type="text" name="email" value="<%= result.email %>">                    
+                    </div>
+
+                </div>
+                <div class="card-profile-inputs mt-3">
+                    
+                    <div>
+                        <label class="text-white">Senha</label>
+                        <div class="container-input-icons">
+                            <i class="text-white far fa-lock"></i>
+                        </div>
+                        <input class="custom-input form-control" type="password" name="password" value="">                    
+                    </div>
+                    <div>
+                        <label class="text-white">Repita a Senha</label>
+                        <div class="container-input-icons">
+                            <i class="text-white far fa-lock"></i>
+                        </div>
+                        <input class="custom-input form-control" type="password" name="re-password" value="">                    
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <button class="btn btn-custom-1 text-white">Atualizar dados</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <%- include('../partials/footer')%>

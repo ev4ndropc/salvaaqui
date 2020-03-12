@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/', usersController);
 app.use('/', linksController);
-app.use('/users', usersRouter);
+app.use('/', usersRouter);
 
 
 

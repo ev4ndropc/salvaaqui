@@ -1,13 +1,90 @@
- <div class="overlay-news">
-  <div class="news-mensages">
-    <i class="close-news far fa-times"></i>
-    <div class="card-header d-flex justify-content-center align-items-center"><img src="https://image.flaticon.com/icons/svg/1782/1782768.svg"> Notificações</div>
+<div class="news-mensages">
+  <i class="close-news far fa-times"></i>
+  <div class="card-header d-flex justify-content-center align-items-center"><img src="https://image.flaticon.com/icons/svg/1782/1782768.svg"> Notificações</div>
+</div>
+<div>
+
+<span data-toggle="modal" data-target="#contactMe" id="comments" data-toggle="tooltip" data-placement="left" title="" data-original-title="Deixe um comentário, critica, sugestão!" style="cursor:pointer;position: fixed; top: 40%; right: 0px; padding: 10px 15px; background: #8065db; border-bottom-left-radius: 5px; border-top-left-radius: 5px;">
+  <i style="font-size: 25px; color: #fff;" class="far fa-comments"></i>
+</span>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="contactMe" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Fale comigo</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="comment" action="/send-comment" method="POST">
+
+        <label>Seu nome</label>
+        <div class="container-input-icons">
+          <i class="text-white far fa-user"></i>
+        </div>
+        <input class="custom-input form-control mb-2 text-capitalize" type="text" name="name" value="<%= sessionUser.name %>">
+
+        <label>Titulo</label>
+        <div class="container-input-icons">
+          <i class="text-white far fa-comment"></i>
+        </div>
+        <input class="custom-input form-control mb-2" type="text" name="title">
+
+        <label>Comentário</label>
+        <textarea class="form-control" placeholder="Digite uma duvida, critica ou sugestão." id="" cols="30" rows="8" name="msg"></textarea>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
   </div>
 </div>
+</div>
+<script>
+  $("#comment").submit(function() {
+    if($("input[name=name]").val() == ''){
+      Swal.fire(
+        'Preencha o campo nome',
+        'O campo nome não pode estar vazio',
+        'error'
+      )
+        return false;
+    }
+    if($("input[name=title]").val() == ''){
+      Swal.fire(
+        'Preencha o campo titulo',
+        'O campo titulo não pode estar vazio',
+        'error'
+      )
+        return false;
+    }
+    if($("textarea[name=msg]").val() == ''){
+      Swal.fire(
+        'Adicione alguma mensagem',
+        'O campo de mensagem não pode estar vazio',
+        'error'
+      )
+        return false;
+    }else{
+      Swal.fire(
+        'Mensagem enviada',
+        'Obrigado pela mensagem, ela é de muita importância!',
+        'success'
+      )
+    }
+  })
+</script>
 </body>
 <script src="/plugins/boostrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="/plugins/boostrap/js/popper.min.js"></script>
 <script src="/plugins/boostrap/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="js/script.js"></script>
+
 </html>

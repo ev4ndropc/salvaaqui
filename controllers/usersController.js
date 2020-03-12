@@ -6,13 +6,6 @@ var adminAuth = require('../middlewares/adminAuth')
 
 
 
-router.get('/dashboard', adminAuth, (req,res) =>{
-    var sessionUser = req.session.user;
-    res.render('dashboard', {
-        sessionUser
-    })
-
-});
 
 
 router.get('/register', (req,res) =>{
@@ -32,17 +25,12 @@ router.get('/logout', adminAuth, (req,res) =>{
     res.redirect('/')
 });
 
-router.get('/profile', (req,res) =>{
-    var sessionUser = req.session.user;
-    res.render('user/profile', {
-        sessionUser
-    })
-});
 
 router.post('/login', (req, res) =>{
     var email = req.body.email;
     var password = req.body.password;
-    
+    var sessionUser = req.session.user
+    var msgErro = 'Por favor, confira se o email e a senha estão corretos!'
     User.findOne({
         where:{
             email: email
@@ -56,8 +44,10 @@ router.post('/login', (req, res) =>{
                 req.session.user = {
                     id: user.id,
                     email: user.email,
-                    name: user.nome,
-                    avatar: user.avatar
+                    name: user.name,
+                    avatar: user.avatar,
+                    theme: user.theme
+
                 }
                 res.redirect('/dashboard')
             }else{
@@ -73,7 +63,7 @@ router.post('/login', (req, res) =>{
 
 
 router.post('/register', (req,res) =>{
-    var nome = req.body.nome;
+    var name = req.body.nome;
     var email = req.body.email;
     var password = req.body.password;
 
@@ -89,10 +79,12 @@ router.post('/register', (req,res) =>{
         
             
             User.create({
-                nome: nome,
+                name: name,
                 email: email,
                 password: hash,
-                avatar: 'defaultAvatar.png'
+                avatar: 'defaultAvatar.png',
+                createdLinks: 0,
+                theme: 'light'
             }).then(() => {
                 res.redirect('/');
             }).catch((err)=>{
