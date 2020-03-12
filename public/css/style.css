@@ -501,7 +501,7 @@ padding-left: 35%;
   display: flex;
   align-items: center;
   border-radius: 3px;
-  padding-left: 15px;
+  padding: 5px 15px;
 }
 .links .actions{
   width: 25%;
@@ -514,6 +514,7 @@ padding-left: 35%;
   color: #a793e8;
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
 }
 
 .links .actions a{
@@ -548,6 +549,7 @@ button.close{
 
 .copiado{
   background: #45484bba;
+  color: #fff;
 }
 
 .error-page{
