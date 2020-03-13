@@ -4,7 +4,7 @@
 </div>
 <div>
 
-<span data-toggle="modal" data-target="#contactMe" id="comments" data-toggle="tooltip" data-placement="left" title="" data-original-title="Deixe um comentário, critica, sugestão!" style="cursor: pointer; position: fixed; top: 40%; right: -10px; padding: 10px 15px; background: #8065db; border-bottom-left-radius: 15px; border-top-left-radius: 15px;    box-shadow: 3px 4px 12px 2px rgba(0, 0, 0, 0.45);">
+<span data-toggle="modal" data-target="#contactMe" id="comments" data-toggle="tooltip" data-placement="left" title="" data-original-title="Deixe um comentário, critica, sugestão!" style="cursor: pointer; position: fixed; top: 40%; right: -10px; padding: 10px 15px; background: #8065db; border-bottom-left-radius: 15px; border-top-left-radius: 15px; box-shadow:3px 4px 12px 2px rgba(0, 0, 0, 0.27)">
   <i style="font-size: 25px; color: #fff;" class="far fa-comments"></i>
 </span>
 </div>
@@ -46,40 +46,6 @@
   </div>
 </div>
 </div>
-<script>
-  $("#comment").submit(function() {
-    if($("input[name=name]").val() == ''){
-      Swal.fire(
-        'Preencha o campo nome',
-        'O campo nome não pode estar vazio',
-        'error'
-      )
-        return false;
-    }
-    if($("input[name=title]").val() == ''){
-      Swal.fire(
-        'Preencha o campo titulo',
-        'O campo titulo não pode estar vazio',
-        'error'
-      )
-        return false;
-    }
-    if($("textarea[name=msg]").val() == ''){
-      Swal.fire(
-        'Adicione alguma mensagem',
-        'O campo de mensagem não pode estar vazio',
-        'error'
-      )
-        return false;
-    }else{
-      Swal.fire(
-        'Mensagem enviada',
-        'Obrigado pela mensagem, ela é de muita importância!',
-        'success'
-      )
-    }
-  })
-</script>
 </body>
 <script src="/plugins/boostrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="/plugins/boostrap/js/popper.min.js"></script>

@@ -61,7 +61,6 @@ router.post('/login', (req, res) =>{
 
 });
 
-
 router.post('/register', (req,res) =>{
     var name = req.body.nome;
     var email = req.body.email;
@@ -92,7 +91,9 @@ router.post('/register', (req,res) =>{
             })
 
         }else{
-            res.redirect('/')
+            res.render('register',{
+                msgErro: 'Já existe um usuário cadastrado com o email informado'
+            })
         }
     })
 

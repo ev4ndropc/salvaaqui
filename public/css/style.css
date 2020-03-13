@@ -40,85 +40,41 @@ body {
 
 @keyframes bgChange {
   0% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:5%;
-    color: #fff;
   }
   10% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:10%;
-    color: #fff;
 
   }
   20% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:15%;
-    color: #fff;
   }
   30% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:20%;
-    color: #fff;
 
   }
   40% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:25%;
-    color: #fff;
   }
   50% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:30%;
-    color: #fff;
 
   }
   60% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:25%;
-    color: #fff;
   }
   70% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:20%;
-    color: #fff;
   }
   80% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:15%;
-    color: #fff;
   }
   90% {
 
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:10%;
-    color: #fff;
   }
   100% {
-    background: -webkit-linear-gradient(#594698, #886be8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-position:5%;
-    color: #fff;
   }
 }
 @media only screen and (max-width: 993px) {
@@ -151,11 +107,13 @@ body {
     flex-direction: row;
     margin-right: -10px;
   }
+
   .user__menu {
-    top: 100%!important;
+    top: 97%!important;
     width: 80%;
     left: 10%;
   }
+
   .links .title,
   .links .link,
   .links .actions{
@@ -182,6 +140,10 @@ body {
   }
   .container-cards-home div span.items{
     font-size: 15px;
+  }
+
+  .created-by {
+    font-size: 12px;
   }
 }
 
@@ -219,6 +181,10 @@ body {
 .container-login .card {
   background: #201f24;
   color: #fff;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+  outline: none!important
 }
 
 div.container-login{
@@ -281,8 +247,6 @@ input:focus{
   font-size: 35px;
   margin: 0 5px;    
   transition: all .2s linear;
-  color: #fff;
-  animation: bgChange 5s linear infinite;
 }
 
 .float{
@@ -319,8 +283,8 @@ input:focus{
 }
 
 .user__menu{
+  min-width: 200px;
   top: -150px;
-  width: 200px;
   position: absolute;
   background: #fff;
   right: 20px;
@@ -353,7 +317,8 @@ input:focus{
   width: 100%;
   padding: 10px;
   border-radius: 3px;
-  padding-left: 35%;
+  display: flex;
+  justify-content: center;
 }
 
 .user__menu-itens a i{
@@ -366,7 +331,6 @@ width: 100%;
 background: #886be8;
 padding: 10px;
 border-radius: 3px;
-padding-left: 35%;
 }
 
 .user__menu-hr{
@@ -433,7 +397,8 @@ padding-left: 35%;
   font-size: 12px;
   position: absolute;
   border-radius: 50%;
-  top: -10px;
+  top: -5px;
+  right: -15px;
 }
 
 .main-card{
@@ -595,7 +560,7 @@ button.close{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 20px 20px;
   position: relative;
 }

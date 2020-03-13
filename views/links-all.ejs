@@ -48,9 +48,14 @@
       </div>
       <div class="modal-body">
         <form action="/add-link" method="POST">
-        <input type="text" class="custom-input form-control mb-2" placeholder="Titulo" name="title">
-        <input type="text" class="custom-input form-control mt-2" placeholder="Link" name="link">
-        <input type="hidden" class="form-control" name="id">
+          <div class="container-input-icons">
+            <i class="far fa-pen"></i>
+          </div>
+          <input type="text" class="custom-input form-control mb-3" placeholder="Titulo" name="title">
+        <div class="container-input-icons">
+          <i class="far fa-link"></i>
+        </div>
+          <input type="text" class="custom-input form-control" placeholder="Link" name="link">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

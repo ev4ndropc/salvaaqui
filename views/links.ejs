@@ -50,9 +50,14 @@
       </div>
       <div class="modal-body">
         <form action="/add-link" method="POST">
-        <input type="text" class="custom-input mb-2 form-control mb-2" placeholder="Titulo" name="title">
-        <input type="text" class="custom-input form-control mt-2" placeholder="Link" name="link">
-        <input type="hidden" class="form-control" name="id">
+          <div class="container-input-icons">
+            <i class="far fa-pen"></i>
+          </div>
+          <input type="text" class="custom-input form-control mb-3" placeholder="Titulo" name="title">
+          <div class="container-input-icons">
+            <i class="far fa-link"></i>
+          </div>
+          <input type="text" class="custom-input form-control" placeholder="Link" name="link">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -62,50 +67,4 @@
     </div>
   </div>
 </div>
-<script>
-  function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  $(element).addClass('copiado');
-  setTimeout(function(){
-    $(element).removeClass('copiado');
-  }, 300)
-  document.execCommand("copy");
-  $temp.remove();
-}
-
-function changeTitle(id){
-  $(this).remove()
-}
-</script>
-
-<script>
-  function ConfirDelete(event, form){
-      event.preventDefault();
-      Swal.fire({
-          title: 'A você tem certeza?',
-          text: "Você não poderá reverter isso!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Sim, delete esse link!'
-          }).then((result) => {
-          if (result.value) {
-              Swal.fire(
-              'Deletado!',
-              'Esse link foi deletado com sucesso!',
-              'success'
-              );
-              
-              setTimeout(function(){
-                  form.submit();
-              }, 1300)
-              
-          }
-      })
-  }
-
-</script>
 <%- include('./partials/footer')%>
