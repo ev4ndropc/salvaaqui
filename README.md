@@ -47,4 +47,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com ♥ by Evandro Pinheiro :wave: [Contato!](e_sayto@hotmail.com)
+Feito com ♥ by Evandro Pinheiro :wave: <a href="mailto:e_sayto@hotmail.com">Contato</a>
