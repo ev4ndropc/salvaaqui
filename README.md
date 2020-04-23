@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Node.js](https://nodejs.org/en/)
 - [EJS](https://ejs.co/)
-- [Bootstrap Native](https://getbootstrap.com/)
+- [Bootstrap](https://getbootstrap.com/)
 - [JQuery](https://jquery.com/)
 
 ## 💻 Meu Primeiro Projeto
